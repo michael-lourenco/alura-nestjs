@@ -1,3 +1,24 @@
+# Cursos realizados neste projeto
+
+Este projeto engloba 1(um) curso realizado através da plataforma [Alura](https://www.alura.com.br/).
+
+### Foco: 
+ - `Back-End`
+ - `NestJs`
+ - `API`
+
+## NestJS: criando uma API Rest com TypeScript
+### Instrutor: [Rodolfo Ghiggi](https://github.com/rodolfoghi)
+
+Conhecimentos adquiridos:
+ - Adquirir os fundamentos, a base para usar o framework
+ - Criar uma API Rest do zero
+ - Criar um CRUD completo
+ - Entender como o NestJS funciona por baixo dos panos
+ - Aprender sobre injeção de dependência
+ - Integrar com banco de dados MySQL utilizando o Sequelize
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
