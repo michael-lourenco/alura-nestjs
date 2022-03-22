@@ -9,29 +9,29 @@ export class ItemsController {
     }
 
     @Get()
-    obeterTodos(): Item[] {
-        return this.itemsService.obterTodos();
+    async obeterTodos(): Promise<Item[]> {
+        return  this.itemsService.obterTodos();
     }
 
     @Get(':id')
-    obterUm(@Param() params): Item {
-        return this.itemsService.obterUm(params.id);
+    async obterUm(@Param() params): Promise<Item> {
+        return  this.itemsService.obterUm(params.id);
     }
 
     @Post()
-    criar(@Body() item: Item) {
+    async criar(@Body() item: Item) {
         console.log(item);
-        this.itemsService.criar(item);
+         this.itemsService.criar(item);
     }
 
     @Put()
-    alterar(@Body() item: Item): Item {
+    async alterar(@Body() item: Item): Promise<[number, Item[]]> {
         console.log(item);
-        return this.itemsService.alterar(item);
+        return  this.itemsService.alterar(item);
     }
 
     @Delete(':id')
-    apagar(@Param() params) {
-        this.itemsService.apagar(params.id);
+    async apagar(@Param() params) {
+         this.itemsService.apagar(params.id);
     }
 } 

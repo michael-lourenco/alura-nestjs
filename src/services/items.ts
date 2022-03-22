@@ -1,29 +1,40 @@
 import { Injectable } from "@nestjs/common";
+import { InjectModel } from "@nestjs/sequelize";
 import { Item } from "src/models/Item"
 
 @Injectable()
 export class ItemsService {
-    items: Item[] = [
-
-    ];
-
-    obterTodos(): Item[] {
-        return this.items;
+    constructor(
+        @InjectModel(Item)
+        private itemModel: typeof Item
+    ) {}
+    
+    async obterTodos(): Promise<Item[]> {
+        return this.itemModel.findAll();
     }
 
-    obterUm(id: string): Item {
-        return this.items[id];
+    async obterUm(id: string): Promise<Item> {
+        return this.itemModel.findByPk(id);
     }
 
-    criar(item: Item) {
-        this.items.push(item);
+    async criar(item: Item) {
+        this.itemModel.create(item);
     }
 
-    alterar(item: Item): Item {
-        return item;
+    async alterar(item: Item): Promise<[number, Item[]]> {
+        return this.itemModel.update(item, {
+            where: {
+                id: item.id
+            }
+        });
     }
 
-    apagar(id: string) {
-        this.items.pop();
+    async apagar(id: string) {
+        const item: Item = await this.obterUm(id);
+        this.itemModel.destroy({
+            where: {
+                id: item.id
+            }
+        });
     }
 }
