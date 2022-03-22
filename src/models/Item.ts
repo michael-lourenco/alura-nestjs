@@ -1,13 +1,29 @@
-export class Item {
-    id: string;
-    name: string;
-    description: string;
-    plaintext: string;
+import { Table, Model, Column, DataType } from "sequelize-typescript";
 
-    constructor(id: string, name: string, description: string, plaintext: string) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.plaintext = plaintext;
-    }
+@Table
+export class Item extends Model<Item> {
+    @Column({
+        type: DataType.STRING(60),
+        allowNull: false,
+    })
+    codigo: string;
+
+    @Column({
+        type: DataType.STRING,
+        allowNull: false,
+    })
+    name: string;
+
+    @Column({
+        type: DataType.STRING,
+        allowNull: false,
+    })
+    description: string;
+
+    @Column({
+        type: DataType.STRING,
+        allowNull: false,
+    })
+    plaintext: string;
 }
+
