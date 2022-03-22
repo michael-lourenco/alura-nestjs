@@ -6,17 +6,18 @@ Este projeto engloba 1(um) curso realizado através da plataforma [Alura](https:
  - `Back-End`
  - `NestJs`
  - `API`
+ - `TypeScript`
 
 ## NestJS: criando uma API Rest com TypeScript
 ### Instrutor: [Rodolfo Ghiggi](https://github.com/rodolfoghi)
 
 Conhecimentos adquiridos:
  - Adquirir os fundamentos, a base para usar o framework
- - Criar uma API Rest do zero
+ - Criar uma `API Rest` do zero
  - Criar um CRUD completo
- - Entender como o NestJS funciona por baixo dos panos
- - Aprender sobre injeção de dependência
- - Integrar com banco de dados MySQL utilizando o Sequelize
+ - Entender como o `NestJS` funciona por baixo dos panos
+ - Aprender sobre `injeção de dependência`
+ - Integrar com banco de dados `MySQL utilizando o Sequelize`
 
 
 <p align="center">
